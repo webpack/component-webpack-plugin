@@ -8,4 +8,4 @@
 
 # build
 
-
+`npm run build`
