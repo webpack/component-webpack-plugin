@@ -6,7 +6,8 @@
   "scripts": {
     "get_comp": "./install",
     "gc": "npm run get_comp",
-    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 9191",
+    "build": "./node_modules/webpack/bin/webpack.js -p"
   },
   "author": "Amin Meyghani <meyghania@gmail.com> (http://meyghani.com)",
   "license": "ISC",
