@@ -22,6 +22,7 @@
     "clone-component": "^0.2.2",
     "component-props": "^1.1.1",
     "component-type": "^1.2.0",
+    "ms": "^0.7.1",
     "type-component": "0.0.1"
   }
 }

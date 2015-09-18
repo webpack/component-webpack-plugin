@@ -1,0 +1,1 @@
+module.exports = '<div class="popover-wrapper">\n  <span class="popover-title"></span>\n  <div class="popover-content"></div>\n</div>';

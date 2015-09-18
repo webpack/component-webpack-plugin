@@ -1,0 +1,25 @@
+{
+  "name": "to-camel-case",
+  "license": "MIT",
+  "version": "0.2.1",
+  "description": "Convert a string to a camel case.",
+  "keywords": [
+    "camel",
+    "case",
+    "camelcase",
+    "string"
+  ],
+  "dependencies": {
+    "ianstormtaylor/to-space-case": "0.1.2"
+  },
+  "development": {
+    "dependencies": {
+      "component/assert": "*"
+    }
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "repository": "ianstormtaylor/to-camel-case",
+  "resolved": "02759f7dcf1b3a9c05568183dc14c738d2a0e229"
+}

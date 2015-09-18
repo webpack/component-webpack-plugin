@@ -2,6 +2,7 @@ var l = require('local-comp');
 console.log(l);
 // some styles
 require('./styles.css');
+require('datepicker/1.0.1/datepicker.css');
 
 // more fixture
 var Calendar = require('calendar');
@@ -58,3 +59,8 @@ restricted = new Calendar(new Date(2004, 6, 11))
   .show(new Date(2004, 5, 19));
 container.appendChild(restricted.el);
 
+
+// date picker
+var picker = require('datepicker');
+var el = document.querySelector('[name=date]');
+picker(el);

@@ -1,0 +1,21 @@
+
+.popover .tip-inner {
+  padding: 0;
+  border: 2px solid #1c1c1c;
+  background: white;
+  color: inherit;
+}
+
+.popover-title {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.popover-content {
+  padding: 10px;
+  padding-top: 0;
+}
+
