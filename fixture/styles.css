@@ -1,0 +1,44 @@
+  body {
+    font: 14px "Helvetica Neue", Helvetica, Arial;
+    /*padding: 80px;*/
+    color: #333;
+  }
+
+  .calendar.large {
+    float: left;
+    clear: both;
+  }
+
+  .calendar.large tbody td {
+    padding: 50px;
+    border: 1px solid #eee;
+    position: relative;
+  }
+
+  .calendar.large tbody a {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .calendar.small th {
+    font-size: 10px;
+  }
+
+  .calendar.small td a {
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .calendar td a.invalid {
+    opacity: .2;
+    background-color: rgba(0, 0, 0, .2);
+    cursor: default;
+  }
+
+  #restricted {
+    clear: left;
+  }
+  #restricted .calendar {
+    float: left;
+  }

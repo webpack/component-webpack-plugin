@@ -1,0 +1,18 @@
+{
+  "name": "range",
+  "description": "Return a range of integers",
+  "version": "1.0.0",
+  "keywords": [
+    "range",
+    "utility",
+    "array"
+  ],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "repository": "component/range",
+  "resolved": "9517514aaf185c9650d3738005887c448af559f9"
+}

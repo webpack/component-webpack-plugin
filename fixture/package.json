@@ -13,8 +13,15 @@
   "devDependencies": {
     "component": "^1.1.0",
     "css-loader": "^0.18.0",
+    "raw-loader": "^0.5.1",
     "style-loader": "^0.12.4",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.11.0"
+  },
+  "dependencies": {
+    "clone-component": "^0.2.2",
+    "component-props": "^1.1.1",
+    "component-type": "^1.2.0",
+    "type-component": "0.0.1"
   }
 }
