@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "component": "./node_modules/component/bin/component",
     "get_comp": "./install",
     "gc": "npm run get_comp",
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 9191",

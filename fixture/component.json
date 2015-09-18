@@ -8,9 +8,9 @@
     "styles.css"
   ],
   "paths": [],
-  "local": [
-    "local-comp"
-  ],
+  "development": {
+    "local-comp": "*"
+  },
   "dependencies": {
     "component/calendar": "~0.2.0",
     "component/datepicker": "^1.0.1"

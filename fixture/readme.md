@@ -1,6 +1,6 @@
 # Setup
 
-`npm i`
+`npm i && npm run component -- install`
 
 # Start dev server
 
