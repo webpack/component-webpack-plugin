@@ -1,0 +1,7 @@
+{
+  "name": "local-comp",
+  "version": "1.0.1",
+  "scripts": ["main.js"],
+  "main": "main.js",
+  "license": "MIT"
+}
