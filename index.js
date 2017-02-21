@@ -83,6 +83,12 @@ ComponentPlugin.prototype.apply = function(compiler) {
 				log(componentFilePath + " doesn't contain a dependency matching " + requestName);
 				return callback();
 			}
+
+			// Load versioned
+			if (componentFileContent.dependencies[fullName] !== '*') {
+				fullName = fullName + '@' + componentFileContent.dependencies[fullName];
+			}
+			
 			log(componentFilePath + " contains a dependency " + fullName);
 			findInDirectories.call(this, fullName);
 		}
