@@ -1,0 +1,30 @@
+{
+  "name": "fixture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "component": "./node_modules/component/bin/component",
+    "get_comp": "./install",
+    "gc": "npm run get_comp",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 9191",
+    "build": "./node_modules/webpack/bin/webpack.js -p"
+  },
+  "author": "Amin Meyghani <meyghania@gmail.com> (http://meyghani.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "component": "^1.1.0",
+    "css-loader": "^0.18.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.12.4",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.11.0"
+  },
+  "dependencies": {
+    "clone-component": "^0.2.2",
+    "component-props": "^1.1.1",
+    "component-type": "^1.2.0",
+    "ms": "^0.7.1",
+    "type-component": "0.0.1"
+  }
+}

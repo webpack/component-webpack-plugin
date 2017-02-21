@@ -1,0 +1,6 @@
+#! /bin/bash
+## usage: ./install nameofcomponent
+## used by `get` inside package json
+## to use it from npm `>2.0` do: `npm run get_comp -- nameofcompoennt`
+## or you can use the alias: `npm run gc -- nameofcompoennt`
+./node_modules/component/bin/component install component/$1

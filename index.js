@@ -57,13 +57,22 @@ ComponentPlugin.prototype.apply = function(compiler) {
 
 		// 2. get the full name for the module
 		// i. e. "emitter" -> "sokra/emitter"
+
+		// when you install a component, it gets registered as:
+		// component/name. We can just get rid of the `component/` part:
+		function normalizeCompName (arr) { return arr.map(function (c) { return c.replace("component/", ""); }); }
+
 		function findModule() {
 			var modules = componentFileContent.local ? componentFileContent.local : [];
 			if(componentFileContent.dependencies) {
-				modules = modules.concat(Object.keys(componentFileContent.dependencies));
+				modules = modules.concat(
+					normalizeCompName(Object.keys(componentFileContent.dependencies))
+					);
 			}
 			if(componentFileContent.development) {
-				modules = modules.concat(Object.keys(componentFileContent.development));
+				modules = modules.concat(
+					normalizeCompName(Object.keys(componentFileContent.development))
+				);
 			}
 			var fullName, requestName = request.request;
 			for(var i = 0; i < modules.length; i++) {
@@ -107,7 +116,25 @@ ComponentPlugin.prototype.apply = function(compiler) {
 					paths = paths.concat(lookupPaths);
 					this.forEachBail(paths, function(path, callback) {
 						var modulesFolderPath = this.join(componentPath, path);
-						var modulePath = this.join(modulesFolderPath, fullName.replace(/\//g, "-"));
+
+						var modulePath = this.join(modulesFolderPath, fullName);
+						// The module path is more like `component/version/`
+						// This is a quick fix to get the correct path of the
+						// component. It seems like all the components follow the same
+						// pattern with some small variation:
+						// `component/v.x.y.z`
+						// or
+						// `component/x.y.z
+						// not the most robust solution but at least it makes it work.
+						try {
+							var versionFolder = require('fs').readdirSync(modulePath);
+						} catch(e) {
+							log('This path does not contain a module' + e);
+						}
+						if (versionFolder) {
+							versionFolder = versionFolder.filter(function (c) { return !/^\./.test(c) && /^v|\d\.\d\.\d/.test(c);  });
+							modulePath = this.join(modulePath, versionFolder[0]);
+						}
 						fs.stat(modulePath, function(err, stat) {
 							if(err || !stat) {
 								log(modulePath + " doesn't exist");
